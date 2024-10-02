@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Emissão de NFS-e</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .nota-fiscal {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emissão da nota fiscal de serviço (NFS-e)</h1>
+
+    <form id="nForm">
+        <div class="form-group">
+            <label for="valorVenda">Valor da Venda:</label>
+            <input type="number" id="valorVenda" required>
+        </div>
+        <div class="form-group">
+            <label for="itensVendidos">Itens Vendidos:</label>
+            <input type="text" id="itensVendidos" required>
+        </div>
+        <div class="form-group">
+            <label for="irpf">Porcentagem do Imposto (IRPF):</label>
+            <input type="number" id="irpf" required>
+        </div>
+        <div class="form-group">
+            <label for="pis">Porcentagem do Imposto (PIS):</label>
+            <input type="number" id="pis" required>
+        </div>
+        <div class="form-group">
+            <label for="cofins">Porcentagem do Imposto (COFINS):</label>
+            <input type="number" id="cofins" required>
+        </div>
+        <div class="form-group">
+            <label for="inss">Porcentagem do Imposto (INSS):</label>
+            <input type="number" id="inss" required>
+        </div>
+        <div class="form-group">
+            <label for="issqn">Porcentagem do Imposto (ISSQN):</label>
+            <input type="number" id="issqn" required>
+        </div>
+        <button type="button" onclick="gerarNotaFiscal()">Gerar Nota Fiscal</button>
+    </form>
+
+    <div id="notaFiscal" class="nota-fiscal"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
